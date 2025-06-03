@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Playground 🎪</h1>
+        <p class="subtitle">Where magic happens ✨</p>
+    </header>
+
+    <main>
+        <!-- Event Handling Section -->
+        <section class="card" id="event-section">
+            <h2>Event Handling 🎈</h2>
+            
+            <div class="event-box">
+                <button id="click-btn" class="interactive-btn">Click Me!</button>
+                <p id="click-output">Button not clicked yet</p>
+            </div>
+            
+            <div class="event-box hover-box" id="hover-box">
+                <p>Hover over me!</p>
+                <div id="hover-effect"></div>
+            </div>
+            
+            <div class="event-box">
+                <input type="text" id="keypress-input" placeholder="Type something...">
+                <p id="keypress-output">Last key pressed: </p>
+            </div>
+            
+            <div class="event-box secret-box" id="secret-box">
+                <p>Double click me for a secret! 🤫</p>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section class="card" id="interactive-section">
+            <h2>Interactive Elements 🎮</h2>
+            
+            <div class="color-changer">
+                <button id="color-btn">Change Color</button>
+                <div id="color-display"></div>
+            </div>
+            
+            <div class="gallery">
+                <h3>Image Gallery</h3>
+                <div class="gallery-container">
+                    <img src="https://picsum.photos/id/237/400/300" alt="Gallery image" class="gallery-img active">
+                    <img src="https://picsum.photos/id/238/400/300" alt="Gallery image" class="gallery-img">
+                    <img src="https://picsum.photos/id/239/400/300" alt="Gallery image" class="gallery-img">
+                </div>
+                <div class="gallery-controls">
+                    <button id="prev-btn">Previous</button>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+            
+            <div class="accordion">
+                <h3>FAQ Accordion</h3>
+                <div class="accordion-item">
+                    <button class="accordion-btn">What is JavaScript? <span>+</span></button>
+                    <div class="accordion-content">
+                        <p>JavaScript is a programming language that allows you to implement complex features on web pages.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">What are events? <span>+</span></button>
+                    <div class="accordion-content">
+                        <p>Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Why is this assignment fun? <span>+</span></button>
+                    <div class="accordion-content">
+                        <p>Because you get to create interactive elements that make web pages come alive!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Section -->
+        <section class="card" id="form-section">
+            <h2>Form Validation 📋</h2>
+            <form id="user-form">
+                <div class="form-group">
+                    <label for="name">Name (required)</label>
+                    <input type="text" id="name" required>
+                    <div class="error-message" id="name-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password (min 8 characters)</label>
+                    <input type="password" id="password">
+                    <div class="error-message" id="password-error"></div>
+                    <div class="password-strength">
+                        <span class="strength-meter"></span>
+                        <span class="strength-meter"></span>
+                        <span class="strength-meter"></span>
+                    </div>
+                </div>
+                
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+            <div id="form-success" class="success-message"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ and JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
